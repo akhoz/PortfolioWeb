@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 
 import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { useTheme } from '../contexts/ThemeContext.jsx';
@@ -21,7 +22,9 @@ function Header() {
                 >
                     <Container fluid>
                         <Navbar.Brand href="#" className={`${isLightMode ? 'text-black' : 'text-white'}`}>
-                            AkhozDev
+                            <Link to ='/PortfolioWeb/'>
+                                AkhozDev
+                            </Link>
                         </Navbar.Brand>
                         <Navbar.Toggle
                             aria-controls={`offcanvasNavbar-expand-${expand}`}
@@ -40,14 +43,16 @@ function Header() {
                                     id={`offcanvasNavbarLabel-expand-${expand}`}
                                     className={`${isLightMode ? 'text-black' : 'text-white'}`}
                                 >
-                                    About Me
+                                    AkhozDev
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body className="items-center">
                                 <hr className={`border-t-2 mx-auto mb-4 ${isLightMode ? "border-lightGradientInit" : "border-darkGradientInit"}`}/>
                                 <Nav className={`justify-content-end flex-grow-1 pe-3`}>
                                     <Nav.Link href="#action1" className={`${isLightMode ? 'text-black' : 'text-white'}`}>
+                                    <Link to ='/PortfolioWeb/'>
                                         Home
+                                    </Link>
                                     </Nav.Link>
                                     <Nav.Link href="#action2" className={`${isLightMode ? 'text-black' : 'text-white'}`}>
                                         Contact
