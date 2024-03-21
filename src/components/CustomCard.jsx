@@ -6,7 +6,7 @@ function CustomCard(props) {
 
     return (
         <div className="rounded-xl object-cover overflow-hidden shadow-lg md:transition-transform md:transform md:hover:scale-105">
-            <img className="w-full h-56" src={`./public/images/cards${props.imgSrc}`} alt={props.alt} />
+            <img className="w-full h-56" src={`/images/cards/${props.imgSrc}`} alt={props.alt} />
             <div className={`px-6 py-4 ${isLightMode ? "bg-lightGray" : "bg-darkBlue"}`}>
                 <div className={`${isLightMode ? "text-black" : "text-white"} font-bold text-xl mb-2`}>
                     {props.title}
