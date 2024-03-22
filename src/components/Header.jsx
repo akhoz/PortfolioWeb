@@ -8,6 +8,10 @@ import { BsList} from 'react-icons/bs';
 function Header() {
     const { isLightMode, toggleTheme } = useTheme();
 
+    const handleButtonClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     return (
         <>
             {['md'].map((expand) => (
@@ -22,7 +26,7 @@ function Header() {
                 >
                     <Container fluid>
                         <Navbar.Brand href="#" className={`${isLightMode ? 'text-black' : 'text-white'}`}>
-                            <Link to ='/PortfolioWeb/'>
+                            <Link to ='/PortfolioWeb/' onClick={handleButtonClick}>
                                 AkhozDev
                             </Link>
                         </Navbar.Brand>
@@ -49,12 +53,12 @@ function Header() {
                             <Offcanvas.Body className="items-center">
                                 <hr className={`border-t-2 mx-auto mb-4 ${isLightMode ? "border-lightGradientInit" : "border-darkGradientInit"}`}/>
                                 <Nav className={`justify-content-end flex-grow-1 pe-3`}>
-                                    <Nav.Link href="#action1" className={`${isLightMode ? 'text-black' : 'text-white'}`}>
-                                    <Link to ='/PortfolioWeb/'>
+                                    <Nav.Link href="" className={`${isLightMode ? 'text-black' : 'text-white'}`} onClick={handleButtonClick}>
+                                    <Link to ='/PortfolioWeb/' onClick={handleButtonClick}>
                                         Home
                                     </Link>
                                     </Nav.Link>
-                                    <Nav.Link href="#action2" className={`${isLightMode ? 'text-black' : 'text-white'}`}>
+                                    <Nav.Link href="#action2" className={`${isLightMode ? 'text-black' : 'text-white'}`} onClick={handleButtonClick}>
                                         Contact
                                     </Nav.Link>
                                 </Nav>

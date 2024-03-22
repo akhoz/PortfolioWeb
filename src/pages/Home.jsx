@@ -15,6 +15,10 @@ function Home() {
     const { isLightMode, toggleTheme } = useTheme();
     const location = useLocation();
 
+    const handleButtonClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     return (
         <div className="flex flex-grow flex-col items-center mt-36">
                 <ProfilePicture className="" />
@@ -36,13 +40,13 @@ function Home() {
                 <IoIosArrowDropdownCircle className={`hidden md:block text-6xl animate-bounce my-10 md:my-16 ${isLightMode ? "text-lightGradientInit" : "text-darkGradientInit"}`} />
 
                 <div className='flex flex-grow flex-col justify-center text-center space-y-5 mb-5 px-3 md:space-y-0 md:space-x-5 md:mb-24 md:flex-row md:w-fit'>
-                    <Link to='./AboutMe'>
+                    <Link to='./AboutMe' onClick={handleButtonClick}>
                         <CustomCard  imgSrc='/wallhaven-3lyrvy_1920x1080.png' alt='AboutMeIMG' title='About Me' description='Here you can find general information about me.' />
                     </Link>
-                    <Link to ='./Projects'>
+                    <Link to ='./Projects' onClick={handleButtonClick}>
                         <CustomCard  imgSrc='/wallhaven-3lyrvy_1920x1080.png' alt='ProjectIMG' title='Projects' description='Explore the projects I&apos;ve developed in this section.' />
                     </Link>
-                    <Link to='./Skills'>
+                    <Link to='./Skills' onClick={handleButtonClick}>
                         <CustomCard  imgSrc='/wallhaven-3lyrvy_1920x1080.png' alt='SkillsIMG' title='Skills' description='Discover my skills in tech and math.' />
                     </Link>
                 </div>
