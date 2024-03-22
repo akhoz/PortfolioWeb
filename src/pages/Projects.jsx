@@ -46,7 +46,7 @@ function Projects() {
                 </div>
 
                 <div className='mt-5 my-3'>
-                    <OutlineButton text="Find the rest of my projects on GitHub" link="https://github.com/akhoz"/>
+                    <OutlineButton text="Find all my projects on GitHub" link="https://github.com/akhoz" />
                 </div>
         </div>
     );
