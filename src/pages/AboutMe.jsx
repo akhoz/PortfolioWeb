@@ -14,7 +14,7 @@ function AboutMe() {
     }
 
     return(
-        <div className="flex flex-col lg:flex-row items-center mt-44 mb-36 mx-20">
+        <div className="flex flex-col lg:flex-row justify-center items-center mt-44 mb-36 mx-20">
             <div className={`w-48 h-48 mb-10 md:w-72 md:h-72 lg:w-96 lg:h-96 lg:mb-0 rounded-full overflow-hidden flex items-center justify-center ${isLightMode ? "bg-gradient-to-r from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-r from-darkGradientInit to-darkGradientEnd"}`}>
                 <img src="./images/pfp.jpg" alt="Profile Picture" className="w-11/12 h-11/12 object-cover rounded-full"/>
             </div>
@@ -26,20 +26,22 @@ function AboutMe() {
                     My name is Adrian Villalobos, and I'm currently studying Software Engineering at ITCR, in my second year.
                 </p>
                 <p className={`text-xl font-bold mt-5`}>
+                    Contact Information
+                </p>
+                <p>
+                    You can contact me via email at <a href= "mailto:akhozdev@gmail.com"
+                    className={`border-b ${isLightMode ? "border-lightGradientInit" : "border-darkGradientInit"}`}>
+                    akhozdev@gmail.com</a> or on LinkedIn. Also, for more casual matters, feel free to reach out to me on Instagram or X (Twitter).
+                </p>
+                <p className={`text-xl font-bold mt-5`}>
                     Skills
                 </p>
                 <p>
                     Among my skills are mathematics, including linear algebra, differential and integral calculus, and of course, various programming skills that you can find in my <Link to='/PortfolioWeb/Skills' 
                     onClick={handleButtonClick} className={`border-b ${isLightMode ? "border-lightGradientInit" : "border-darkGradientInit"}`}>  skills section</Link>
                 </p>
-                <p className={`text-xl font-bold mt-5`}>
-                    Goals
-                </p>
-                <p>
-                    As achievements, I have become an engineer in artificial intelligence. I aspire to be able to assist people and contribute from within this field.
-                </p>
             </div>
-            <div className={`${isLightMode ? "bg-gradient-to-b from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-b from-darkGradientInit to-darkGradientEnd"} flex lg:flex-col sm:flex-row space-x-2 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden px-2 py-2 mt-16 lg:mt-0 xl:ml-96`}>
+            <div className={`${isLightMode ? "bg-gradient-to-r lg:bg-gradient-to-b from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-r lg:bg-gradient-to-b from-darkGradientInit to-darkGradientEnd"} flex lg:flex-col sm:flex-row space-x-2 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden px-2 py-2 mt-16 lg:mt-0 xl:ml-96`}>
                 <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
                     <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"}`}/>
                 </a>
@@ -48,7 +50,7 @@ function AboutMe() {
                     <FaGithub className={`text-3xl mr-3  my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"} mx-0`} />
                 </a>
 
-                <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
+                <a href= "mailto:akhozdev@gmail.com" target="_blank" rel="noopener noreferrer">
                     <SiGmail className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"}`}/>
                 </a>
 

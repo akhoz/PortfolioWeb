@@ -39,7 +39,7 @@ function Home() {
 
                 <IoIosArrowDropdownCircle className={`hidden md:block text-6xl animate-bounce my-10 md:my-16 ${isLightMode ? "text-lightGradientInit" : "text-darkGradientInit"}`} />
 
-                <div className='flex flex-grow flex-col justify-center text-center space-y-5 mb-5 px-3 md:mb-24 lg:space-y-0 lg:space-x-5 lg:flex-row lg:w-fit'>
+                <div className='flex flex-grow flex-col justify-center text-center space-y-5 mb-5 px-3 md:mb-36 lg:space-y-0 lg:space-x-5 lg:flex-row lg:w-fit'>
                     <Link to='./AboutMe' onClick={handleButtonClick}>
                         <CustomCard  imgSrc='/wallhaven-3lyrvy_1920x1080.png' alt='AboutMeIMG' title='About Me' description='Here you can find general information about me.' />
                     </Link>
@@ -50,21 +50,6 @@ function Home() {
                         <CustomCard  imgSrc='/wallhaven-3lyrvy_1920x1080.png' alt='SkillsIMG' title='Skills' description='Discover my skills in tech and math.' />
                     </Link>
                 </div>
-
-                <div className='flex flex-row mt-10 mb-4 opacity-50 space-x-2 items-center justify-center'>
-                    <a href="https://github.com/akhoz" target="_blank" rel="noopener noreferrer">
-                        <FaGithub className={`text-3xl mr-3  my-2 ${isLightMode ? "text-black" : "text-white"} mx-0`} />
-                    </a>
-
-                    <a href="https://twitter.com/akhoz69" target="_blank" rel="noopener noreferrer">
-                        <BsTwitterX className={`text-3xl my-2 ${isLightMode ? "text-black" : "text-white"}`} />
-                    </a>
-
-                    <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
-                        <BsInstagram className={`text-3xl my-2 ${isLightMode ? "text-black" : "text-white"}`}/>
-                    </a>
-                </div>
-
             </div>
     );
 }

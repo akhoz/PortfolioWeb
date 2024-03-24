@@ -59,9 +59,6 @@ function Header() {
                                         Home
                                     </Link>
                                     </Nav.Link>
-                                    <Nav.Link href="#action2" className={`${isLightMode ? 'text-black' : 'text-white'}`} onClick={handleButtonClick}>
-                                        Contact
-                                    </Nav.Link>
                                 </Nav>
                                 <ThemeToggle />
                             </Offcanvas.Body>
