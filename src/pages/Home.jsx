@@ -39,7 +39,7 @@ function Home() {
 
                 <IoIosArrowDropdownCircle className={`hidden md:block text-6xl animate-bounce my-10 md:my-16 ${isLightMode ? "text-lightGradientInit" : "text-darkGradientInit"}`} />
 
-                <div className='flex flex-grow flex-col justify-center text-center space-y-5 mb-5 px-3 md:space-y-0 md:space-x-5 md:mb-24 md:flex-row md:w-fit'>
+                <div className='flex flex-grow flex-col justify-center text-center space-y-5 mb-5 px-3 md:mb-24 lg:space-y-0 lg:space-x-5 lg:flex-row lg:w-fit'>
                     <Link to='./AboutMe' onClick={handleButtonClick}>
                         <CustomCard  imgSrc='/wallhaven-3lyrvy_1920x1080.png' alt='AboutMeIMG' title='About Me' description='Here you can find general information about me.' />
                     </Link>
