@@ -14,11 +14,11 @@ function AboutMe() {
     }
 
     return(
-        <div className="flex flex-row items-center mt-44 mb-36 mx-20">
-            <div className={`w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden flex items-center justify-center ${isLightMode ? "bg-gradient-to-r from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-r from-darkGradientInit to-darkGradientEnd"}`}>
+        <div className="flex flex-col lg:flex-row items-center mt-44 mb-36 mx-20">
+            <div className={`w-48 h-48 mb-10 md:w-72 md:h-72 lg:w-96 lg:h-96 lg:mb-0 rounded-full overflow-hidden flex items-center justify-center ${isLightMode ? "bg-gradient-to-r from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-r from-darkGradientInit to-darkGradientEnd"}`}>
                 <img src="./images/pfp.jpg" alt="Profile Picture" className="w-11/12 h-11/12 object-cover rounded-full"/>
             </div>
-            <div className={`${isLightMode ? "text-black" : "text-white"} max-w-md flex flex-col ml-8`}>
+            <div className={`${isLightMode ? "text-black" : "text-white"} md:max-w-sm lg:max-w-md sm:text-center lg:text-left lg:ml-8 flex flex-col`}>
                 <p className={`text-xl font-bold`}>
                     Personal Information
                 </p>
@@ -39,7 +39,7 @@ function AboutMe() {
                     As achievements, I have become an engineer in artificial intelligence. I aspire to be able to assist people and contribute from within this field.
                 </p>
             </div>
-            <div className={`${isLightMode ? "bg-gradient-to-b from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-b from-darkGradientInit to-darkGradientEnd"} flex flex-col justify-center items-center rounded-xl overflow-hidden px-2 py-2 ml-96`}>
+            <div className={`${isLightMode ? "bg-gradient-to-b from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-b from-darkGradientInit to-darkGradientEnd"} flex lg:flex-col sm:flex-row space-x-2 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden px-2 py-2 mt-16 lg:mt-0 xl:ml-96`}>
                 <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
                     <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"}`}/>
                 </a>
