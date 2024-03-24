@@ -5,7 +5,7 @@ function CustomCard(props) {
     const { isLightMode } = useTheme();
 
     return (
-        <div className="rounded-xl object-cover overflow-hidden shadow-lg md:transition-transform md:transform md:hover:scale-105">
+        <div className="max-w-md rounded-xl object-cover overflow-hidden shadow-lg md:transition-transform md:transform md:hover:scale-105" >
             <img className="w-full h-56" src={`./images/cards${props.imgSrc}`} alt={props.alt} />
             <div className={`px-6 py-4 ${isLightMode ? "bg-lightGray" : "bg-darkBlue"}`}>
                 <div className={`${isLightMode ? "text-black" : "text-white"} font-bold text-xl mb-2`}>
