@@ -43,23 +43,23 @@ function AboutMe() {
             </div>
             <div className={`${isLightMode ? "bg-gradient-to-r lg:bg-gradient-to-b from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-r lg:bg-gradient-to-b from-darkGradientInit to-darkGradientEnd"} flex lg:flex-col sm:flex-row space-x-2 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden px-2 py-2 mt-16 lg:mt-0 xl:ml-96`}>
                 <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
-                    <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"}`}/>
+                    <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`}/>
                 </a>
 
                 <a href="https://github.com/akhoz" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className={`text-3xl mr-3  my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"} mx-0`} />
+                    <FaGithub className={`text-3xl mr-3  my-2 md:transition-transform md:transform md:hover:scale-110 text-white mx-0`} />
                 </a>
 
                 <a href= "mailto:akhozdev@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <SiGmail className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"}`}/>
+                    <SiGmail className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`}/>
                 </a>
 
                 <a href="https://twitter.com/akhoz69" target="_blank" rel="noopener noreferrer">
-                    <BsTwitterX className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"}`} />
+                    <BsTwitterX className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
                 </a>
 
                 <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
-                    <BsInstagram className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 ${isLightMode ? "text-black" : "text-white"}`}/>
+                    <BsInstagram className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`}/>
                 </a>
             </div>
         </div>
