@@ -55,6 +55,7 @@ function Header() {
                                 <Nav className={`justify-content-end flex-grow-1 pe-3`}>
                                     <Nav.Link href="" className={`${isLightMode ? 'text-black' : 'text-white'}`} onClick={handleButtonClick}>
                                     <Link to ='/PortfolioWeb/' onClick={handleButtonClick}>
+
                                         Home
                                     </Link>
                                     </Nav.Link>
