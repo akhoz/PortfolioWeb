@@ -16,7 +16,7 @@ function App() {
         <div className="flex flex-col min-h-screen">
             <Router>
                 <div>
-                    <Header />
+                    <Header className='opacity-90'/>
                     <Routes>
                             <Route path={`${root}`} element={<Home />} />
                             <Route path={`${root}/AboutMe`} element={<AboutMe />} />
