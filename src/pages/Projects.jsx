@@ -45,11 +45,11 @@ function Projects() {
 
                     <div className={`flex flex-col justify-center items-center space-y-5 my-3 w-80 md:max-w-screen-lg md:w-screen lg:flex-row lg:space-x-5 lg:space-y-0  lg:max-w-screen-lg xl:max-w-screen-xl`}>
                         <ProjectCard 
-                            imgSrc='./images/cards/COMINGSOON.png' 
-                            title='Coming soon'
-                            description='I am working on new projects. Stay tuned for updates to this section.'
-                            link="https://github.com/akhoz/PortfolioWeb"
-                            technologies=''/>
+                            imgSrc='./images/cards/MarkerLandingPage.png' 
+                            title='Marker Landing Page'
+                            description='Pre-release page of "Marker". This project marks my first foray into using TypeScript within React environments.'
+                            link="https://akhoz.github.io/MarkerLandingPage/"
+                            technologies='https://skillicons.dev/icons?i=html,css,ts,react,tailwindcss,vite&perline=3'/>
                         <ProjectCard 
                             imgSrc='./images/cards/COMINGSOON.png' 
                             title='Coming soon'
@@ -72,7 +72,7 @@ function Projects() {
                     <div className={`flex flex-col justify-center items-center space-y-5 my-3 w-80 md:max-w-screen-lg md:w-screen lg:flex-row lg:space-x-5 lg:space-y-0  lg:max-w-screen-lg xl:max-w-screen-xl`}>
                         <ProjectCard 
                             imgSrc='./images/cards/webscrapping.webp' 
-                            title='Web Scrapping: Game Crawler'
+                            title='Web Scraping: Game Crawler'
                             description='A web scraper gathers game listings from various platforms, displaying the cheapest options on a public site with Metascore and Time to Achieve data."'
                             link="https://github.com/akhoz/Web-Scraping-Game-Crawler"
                             technologies='https://skillicons.dev/icons?i=python,vue,ts'/>
