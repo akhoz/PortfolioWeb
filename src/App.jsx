@@ -10,25 +10,28 @@ import Projects from "./pages/Projects.jsx"
 import Skills from "./pages/Skills.jsx"
 
 function App() {
-    const root = "/PortfolioWeb";
+  const root = "/PortfolioWeb";
 
-    return (
-        <div className="flex flex-col min-h-screen">
-            <Router>
-                <div>
-                    <Header className='opacity-90'/>
-                    <Routes>
-                            <Route path={`${root}`} element={<Home />} />
-                            <Route path={`${root}/AboutMe`} element={<AboutMe />} />
-                            <Route path={`${root}/Projects`} element={<Projects />} />
-                            <Route path={`${root}/Skills`} element={<Skills />} />
-                            
-                    </Routes>
-                    <Footer />
-                </div>
-            </Router>
-        </div>
-    );
+  return (
+    <>
+      <div className="flex flex-col items-center w-full justify-center">
+        <Router>
+          <div>
+            <Header className='opacity-90' />
+            <Routes>
+              <Route path={`${root}`} element={<Home />} />
+              <Route path={`${root}/AboutMe`} element={<AboutMe />} />
+              <Route path={`${root}/Projects`} element={<Projects />} />
+              <Route path={`${root}/Skills`} element={<Skills />} />
+
+            </Routes>
+          </div>
+        </Router>
+      </div>
+      <Footer />
+    </>
+
+  );
 }
 
 export default App;

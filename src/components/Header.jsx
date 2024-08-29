@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { useTheme } from '../contexts/ThemeContext.jsx';
 import ThemeToggle from './ThemeToggle.jsx';
+import { CiMenuBurger } from "react-icons/ci";
 
 function Header() {
   const { isLightMode, toggleTheme } = useTheme();
@@ -15,7 +16,7 @@ function Header() {
       <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
         AkhozDev
       </Link>
-      <div className='flex flex-row space-x-2 md:space-x-5 items-center'>
+      <div className='hidden md:flex flex-row space-x-2 md:space-x-5 items-center'>
         <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
           Home
         </Link>
@@ -31,7 +32,9 @@ function Header() {
         <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
           Contact
         </Link>
-
+      </div>
+      <div className='flex flex-col items-end justify-center text-white md:hidden'>
+        <CiMenuBurger />
       </div>
     </div>
   );

@@ -33,9 +33,9 @@ function Home() {
   }
 
   return (
-    <div className='flex flex-col w-screen h-grow items-center justify-center'>
-      <div className='flex flex-col w-full h-screen items-center justify-center lg:flex-row'>
-        <div className='flex flex-col items-start justify-center space-y-2 w-10/12 md:w-3/4 lg:w-1/3'>
+    <div className='flex flex-col w-full h-screen items-center justify-center bg-darkBlue'>
+      <div className='flex flex-col w-full h-full items-center justify-center lg:flex-row'>
+        <div className='flex flex-col items-center justify-center space-y-2 w-9/12 md:items-start md:w-3/4 lg:w-1/3'>
           <p className='text-myAquamarine'>
             Hello, my name is
           </p>
@@ -45,12 +45,12 @@ function Home() {
           <h2 className='text-myGray text-4xl'>
             Software Engineer
           </h2>
-          <p className='text-myDarkGray text-md'>
+          <p className='text-myDarkGray text-md sm:text-center md:text-start'>
             I am currently a student at ITCR, Costa Rica. I am interested in everything
             related to artificial intelligence, cybersecurity, web development, among others.
             Discover more about me in this portfolio.
           </p>
-          <div className='flex flex-row items-center justify-start space-x-5'>
+          <div className='flex flex-row items-center justify-center space-x-5 md:justify-start'>
             <button className='flex flex-col items-center justify-center text-white'>
               <div className='flex flex-row items-center justify-center space-x-1'>
                 <FaArrowDown />
@@ -59,9 +59,9 @@ function Home() {
               <div className='bg-myAquamarine pt-0.5 w-full'></div>
             </button>
             <div className='w-1/6'>
-              <Marquee className='rounded-lg bg-mySecondary text-white text-xl space-x-10'
+              <Marquee className='rounded-lg bg-mySecondary text-white text-xl'
                 pauseOnHover='true'
-                speed='10'>
+                speed='15'>
                 <TbMathIntegralX />
                 <FaReact />
                 <FaVuejs />
@@ -80,7 +80,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className='flex sm:flex-row bg-myAquamarine lg:flex-col space-x-3 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden px-2 py-2 mt-16 lg:mt-0 xl:ml-96'>
+        <div className='flex sm:flex-row bg-myAquamarine lg:flex-col space-x-3 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden px-2 py-2 mt-16 lg:mt-0 lg:ml-96'>
           <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
             <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
           </a>
