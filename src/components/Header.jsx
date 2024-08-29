@@ -12,7 +12,7 @@ function Header() {
   }
 
   return (
-    <div className={`flex flex-row justify-between items-center mb-3 fixed top-0 left-0 right-0 z-10 py-8 px-28 transition-all duration-300 opacity-90 ${isLightMode ? 'bg-lightGray' : 'bg-darkBlue'}`}>
+    <div className={`flex flex-row justify-between items-center mb-3 fixed top-0 left-0 right-0 z-10 py-8 px-10 md:px-28 transition-all duration-300 opacity-90 ${isLightMode ? 'bg-lightGray' : 'bg-darkBlue'}`}>
       <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
         AkhozDev
       </Link>

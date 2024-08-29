@@ -13,24 +13,21 @@ function App() {
   const root = "/PortfolioWeb";
 
   return (
-    <>
-      <div className="flex flex-col items-center w-full justify-center">
-        <Router>
-          <div>
-            <Header className='opacity-90' />
-            <Routes>
-              <Route path={`${root}`} element={<Home />} />
-              <Route path={`${root}/AboutMe`} element={<AboutMe />} />
-              <Route path={`${root}/Projects`} element={<Projects />} />
-              <Route path={`${root}/Skills`} element={<Skills />} />
+    <div className="flex flex-col min-h-screen">
+      <Router>
+        <div>
+          <Header className='opacity-90' />
+          <Routes>
+            <Route path={`${root}`} element={<Home />} />
+            <Route path={`${root}/AboutMe`} element={<AboutMe />} />
+            <Route path={`${root}/Projects`} element={<Projects />} />
+            <Route path={`${root}/Skills`} element={<Skills />} />
 
-            </Routes>
-          </div>
-        </Router>
-      </div>
-      <Footer />
-    </>
-
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </div>
   );
 }
 
