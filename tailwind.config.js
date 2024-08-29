@@ -10,7 +10,7 @@ export default {
       colors: {
 
         // New Dark Mode 
-        mySecondary: 'hsl(230, 17%, 20%)',
+        mySecondary: 'hsl(230, 17%, 13%)',
         myAquamarine: 'hsl(163, 96%, 45%)',
         myGray: 'hsl(217, 15%, 41%)',
         myDarkGray: 'hsl(217, 15%, 35%)',

@@ -19,7 +19,10 @@ import { FaJava } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
-
+import { MdWeb } from "react-icons/md";
+import { FaServer } from "react-icons/fa";
+import { FaRobot } from "react-icons/fa";
+import { IoMdPerson } from "react-icons/io";
 
 function Home() {
 
@@ -76,7 +79,7 @@ function Home() {
             <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
           </a>
           <a href="https://github.com/akhoz" target="_blank" rel="noopener noreferrer">
-            <FaGithub className={`text-3xl mr-3  my-2 md:transition-transform md:transform md:hover:scale-110 text-white mx-0`} />
+            <FaGithub className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white mx-0`} />
           </a>
           <a href="mailto:akhozdev@gmail.com" target="_blank" rel="noopener noreferrer">
             <SiGmail className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
@@ -89,8 +92,8 @@ function Home() {
           </a>
         </div>
       </div>
-      <div className='flex flex-col-reverse items-center justify-center w-10/12 mb-40 space-y-5 lg:justify-between lg:space-y-0 lg:px-14 lg:flex-row lg:items-start'>
-        <div className="flex flex-col items-start justify-center space-y-10 lg:w-1/2">
+      <div className='flex flex-col-reverse items-center justify-center w-10/12 mb-40 space-y-10 lg:justify-between lg:space-y-0 lg:px-14 lg:flex-row lg:items-start'>
+        <div className="flex flex-col items-start justify-center space-y-10 mt-20 lg:mt-0 lg:w-1/2">
           <div>
             <h2 className='text-white text-4xl'>
               About <span className='text-myAquamarine'>me</span>
@@ -98,12 +101,12 @@ function Home() {
             <p className='text-myGray'>
               My name is Adrian Villalobos, and I'm currently studying Software Engineering at ITCR, in my second year.
               Among my skills are mathematics, including linear algebra, differential and integral calculus, and of course, various programming
-              skills that you can find in my skills section
+              skills that you can find in my skills section.
             </p>
           </div>
           <div>
             <h2 className='text-white text-4xl'>
-              How to <span className='text-myAquamarine'>reach</span> me ?
+              How to <span className='text-myAquamarine'>reach</span> me?
             </h2>
             <p className='text-myGray'>
               You can contact me via email at <a href="mailto:akhozdev@gmail.com"
@@ -113,19 +116,64 @@ function Home() {
           </div>
           <div>
             <h2 className='text-white text-4xl'>
-              Can I <span className='text-myAquamarine'>use</span> this repository?
+              Can I <span className='text-myAquamarine'>use</span> your projects?
             </h2>
             <p className='text-myGray'>
-              Absolutely, you can use this repository to create your own portfolio without any issues.
-              Visit this <a className={`border-b border-myAquamarine`} href="https://github.com/akhoz/PortfolioWeb" target="_blank">link</a>, clone the repository,
-              and start customizing it!
+              It depends; each project has its own license and specifications. I recommend that you read
+              each one. However, as a general rule, you are always welcome to modify one of my repositories
+              as long as you give proper credit.
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-start lg:items-end lg:justify-center lg:w-1/2">
+        <div className="flex flex-col items-center justify-between h-full space-y-5 lg:items-end lg:justify-center lg:w-1/2">
           <h2 className='text-myGray text-4xl'>
-            Most Recent Projects
+            My Capabilities
           </h2>
+          <div className="flex flex-col items-start justify-center space-y-5">
+            <div className="flex flex-row items-center justify-end space-x-2">
+              <div className="flex items-center justify-center p-2 bg-myAquamarine rounded-lg">
+                <MdWeb className="text-xl" />
+              </div>
+              <h3 className="text-white">
+                Frontend
+              </h3>
+            </div>
+            <div className="flex flex-row items-center justify-end space-x-2">
+              <div className="flex items-center justify-center p-2 bg-myAquamarine rounded-lg">
+                <FaServer className="text-xl" />
+              </div>
+              <h3 className="text-white">
+                Backend
+              </h3>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-2">
+              <div className="flex items-center justify-center p-2 bg-myAquamarine rounded-lg">
+                <FaRobot className="text-xl" />
+              </div>
+              <h3 className="text-white">
+                AI & ML
+              </h3>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-2">
+              <div className="flex items-center justify-center p-2 bg-myAquamarine rounded-lg">
+                <TbMathIntegralX className="text-xl" />
+              </div>
+              <h3 className="text-white">
+                Mathematics
+              </h3>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-2">
+              <div className="flex items-center justify-center p-2 bg-myAquamarine rounded-lg">
+                <IoMdPerson className="text-xl" />
+              </div>
+              <h3 className="text-white">
+                Soft skills
+              </h3>
+            </div>
+          </div>
+          <p className="text-myDarkGray text-center lg:text-start lg:w-1/2">
+            Learn more about my capabilities and what can I offer in the skills section.
+          </p>
         </div>
       </div>
     </div>
