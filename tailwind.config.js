@@ -7,10 +7,16 @@ export default {
   ],
   theme: {
     extend: {
-        colors: {
+      colors: {
+
+        // New Dark Mode 
+        mySecondary: 'hsl(230, 17%, 20%)',
+        myAquamarine: 'hsl(163, 96%, 45%)',
+        myGray: 'hsl(217, 15%, 41%)',
+        myDarkGray: 'hsl(217, 15%, 35%)',
 
         // Dark mode
-        darkBlue: 'hsl(232, 19%, 15%)', //Dark mode header background
+        darkBlue: 'hsl(230, 17%, 14%)', //Dark mode header background
         darkGradientInit: 'hsl(331, 93%, 48%)',
         darkGradientEnd: 'hsl(25, 100% ,50%)',
 
