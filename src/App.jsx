@@ -10,7 +10,7 @@ import Projects from "./pages/Projects.jsx"
 import Skills from "./pages/Skills.jsx"
 
 function App() {
-  const root = "/PortfolioWeb";
+  const root = "/";
 
   return (
     <div className="flex flex-col min-h-screen">
