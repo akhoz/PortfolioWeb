@@ -89,15 +89,44 @@ function Home() {
           </a>
         </div>
       </div>
-      <div className='flex flex-col items-start justify-center space-y-2 w-8/12'>
-        <h2 className='text-white text-4xl'>
-          How to <span className='text-myAquamarine'>reach</span> me ?
-        </h2>
-        <p className='text-myGray w-1/2'>
-          You can contact me via email at <a href="mailto:akhozdev@gmail.com"
-            className={`border-b border-myAquamarine`}>
-            akhozdev@gmail.com</a> or on LinkedIn. Also, for more casual matters, feel free to reach out to me on Instagram or X (Twitter).
-        </p>
+      <div className='flex flex-col-reverse items-center justify-center w-10/12 mb-40 space-y-5 lg:justify-between lg:space-y-0 lg:px-14 lg:flex-row lg:items-start'>
+        <div className="flex flex-col items-start justify-center space-y-10 lg:w-1/2">
+          <div>
+            <h2 className='text-white text-4xl'>
+              About <span className='text-myAquamarine'>me</span>
+            </h2>
+            <p className='text-myGray'>
+              My name is Adrian Villalobos, and I'm currently studying Software Engineering at ITCR, in my second year.
+              Among my skills are mathematics, including linear algebra, differential and integral calculus, and of course, various programming
+              skills that you can find in my skills section
+            </p>
+          </div>
+          <div>
+            <h2 className='text-white text-4xl'>
+              How to <span className='text-myAquamarine'>reach</span> me ?
+            </h2>
+            <p className='text-myGray'>
+              You can contact me via email at <a href="mailto:akhozdev@gmail.com"
+                className={`border-b border-myAquamarine`}>
+                akhozdev@gmail.com</a> or on LinkedIn. Also, for more casual matters, feel free to reach out to me on Instagram or X (Twitter).
+            </p>
+          </div>
+          <div>
+            <h2 className='text-white text-4xl'>
+              Can I <span className='text-myAquamarine'>use</span> this repository?
+            </h2>
+            <p className='text-myGray'>
+              Absolutely, you can use this repository to create your own portfolio without any issues.
+              Visit this <a className={`border-b border-myAquamarine`} href="https://github.com/akhoz/PortfolioWeb" target="_blank">link</a>, clone the repository,
+              and start customizing it!
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-start lg:items-end lg:justify-center lg:w-1/2">
+          <h2 className='text-myGray text-4xl'>
+            Most Recent Projects
+          </h2>
+        </div>
       </div>
     </div>
   );
