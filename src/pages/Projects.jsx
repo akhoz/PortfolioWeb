@@ -8,7 +8,21 @@ import { BsInstagram } from "react-icons/bs";
 // Projects Technologies
 import { FaRust } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
+import { FaNodeJs } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
+import { GiBilledCap } from "react-icons/gi";
+import { IoIosFootball } from "react-icons/io";
+import { SiFrontendmentor } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { FaTicket } from "react-icons/fa6";
+import { SiCsharp } from "react-icons/si";
+import { BsBuildingFillGear } from "react-icons/bs";
+import { SiCplusplus } from "react-icons/si";
+import { IoGameController } from "react-icons/io5";
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("Fullstack");
@@ -96,43 +110,53 @@ function Projects() {
           </span>
         </button>
       </div>
-      <div className="grid grid-cols-1 gap-2 w-3/4 items-center justify-center md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-y-5 grid-cols-1 w-full items-center justify-center md:grid-cols-2 lg:grid-cols-3 pl-20">
         {selectedCategory === "Fullstack" && (
           <>
             <ProjectCard
-              icon={<FaGithub />}
-              title="Hello World"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              repository="https://github.com/akhoz/Iconic-Caps"
+              icon={<GiBilledCap />}
+              title="Iconic Caps"
+              description="Iconic Caps began as a database project where we created a MySQL database, normalized it, and worked with cursors and triggers, among other tasks. The goal was to integrate it into a website with a minimalist and efficient design, ensuring smooth data handling and performance optimization."
               collabolators={{
-                "iZackk": "https://www.izackk.com"
+                "Ram": "https://github.com/RamchelOrtiz",
+                "Hector": "https://github.com/hectorcaravacavargas"
               }}
               technologies={[
-                FaRust
+                FaReact,
+                FaNodeJs,
+                SiTailwindcss,
+                DiMysql
               ]}
             />
             <ProjectCard
-              icon={<BsTwitterX />}
-              title="Second Project"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              repository="https://github.com/akhoz/Football-Insights"
+              icon={<IoIosFootball />}
+              title="Football Insights"
+              description="Football Insights originated from a university project requiring the development of an application that leverages an API (in this case, API-FOOTBALL) to filter information through various criteria. It also features a Firebase database, user management, and login functionality with Google and X (Twitter)."
               collabolators={{
-                "Ram": "https://www.izackk.com",
-                "Hector": "https://www.izackk.com"
+                "Ram": "https://github.com/RamchelOrtiz",
+                "Hector": "https://github.com/hectorcaravacavargas"
               }}
               technologies={[
                 FaVuejs,
-                FaPython
+                FaPython,
+                SiTailwindcss,
+                IoLogoFirebase
               ]}
             />
             <ProjectCard
-              icon={<BsInstagram />}
-              title="Third Project"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              repository="https://github.com/akhoz/Web-Scraping-Game-Crawler"
+              icon={<IoGameController />}
+              title="Web Scraper: Game Crawler"
+              description="This project was our first foray into full-stack development. It features a web scraper that gathers information about games from sites like G2A and PlayStation. This data is then used to generate a frontend, which is connected via Flask, creating a cohesive and interactive application."
               collabolators={{
-                "Ram": "https://www.izackk.com",
-                "Hector": "https://www.izackk.com"
+                "iZackk": "https://www.izackk.com",
+                "Hector": "https://github.com/hectorcaravacavargas"
               }}
               technologies={[
-                FaRust
+                FaVuejs,
+                FaPython,
               ]}
             />
           </>
@@ -141,39 +165,30 @@ function Projects() {
         {selectedCategory === "Frontend" && (
           <>
             <ProjectCard
+              repository="https://github.com/akhoz/PortfolioWeb"
               icon={<FaGithub />}
-              title="Hello World"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              title="Web Portfolio"
+              description="This portfolio website emerged from the need to showcase my skills and provide better access to my abilities, projects, and overall persona. It is built using React and Tailwind CSS, designed to offer a seamless and visually appealing user experience while highlighting my work and expertise."
               collabolators={{
-                "iZackk": "https://www.izackk.com"
+                "---": "https://github.com/akhoz"
               }}
               technologies={[
-                FaRust
+                FaReact,
+                SiTailwindcss
               ]}
             />
             <ProjectCard
-              icon={<BsTwitterX />}
-              title="Second Project"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              repository="https://github.com/akhoz/MarkerLandingPage"
+              icon={<SiFrontendmentor />}
+              title="Marker Landing Page"
+              description="This project stems from my desire to learn frontend development and originates from Frontend Mentor. It served as both a practical exercise and my introduction to TypeScript, providing a hands-on experience in applying new skills and understanding key concepts in frontend design."
               collabolators={{
-                "Ram": "https://www.izackk.com",
-                "Hector": "https://www.izackk.com"
+                "---": "https://github.com/akhoz"
               }}
               technologies={[
-                FaVuejs,
-                FaPython
-              ]}
-            />
-            <ProjectCard
-              icon={<BsInstagram />}
-              title="Third Project"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
-              collabolators={{
-                "Ram": "https://www.izackk.com",
-                "Hector": "https://www.izackk.com"
-              }}
-              technologies={[
-                FaRust
+                FaReact,
+                SiTypescript,
+                SiTailwindcss
               ]}
             />
           </>
@@ -182,27 +197,27 @@ function Projects() {
         {selectedCategory === "Backend" && (
           <>
             <ProjectCard
-              icon={<FaGithub />}
-              title="Hello World"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              repository="https://github.com/iZackk26/Tickets-Manager"
+              icon={<FaTicket />}
+              title="Tickets Manager"
+              description="Tickets Manager is a server designed to handle user requests for purchasing tickets to a fictional stadium. The server features an automated ticketing system that selects the best seats based on specific parameters. It is equipped with threads, priority lists, and other components to ensure efficient and optimal ticket processing."
               collabolators={{
                 "iZackk": "https://www.izackk.com"
               }}
               technologies={[
-                FaRust
+                FaRust,
+                SiCsharp
               ]}
             />
             <ProjectCard
-              icon={<BsTwitterX />}
-              title="Second Project"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              icon={<BsBuildingFillGear />}
+              title="Enterprise Managment Handler"
+              description="This project originated during my data structures course and involves an enterprise management system. It includes features for handling payroll, product stock, and more. Developed in C++, it utilizes a wide range of data structures to manage various aspects of the system efficiently."
               collabolators={{
-                "Ram": "https://www.izackk.com",
-                "Hector": "https://www.izackk.com"
+                "iZackk": "https://www.izackk.com"
               }}
               technologies={[
-                FaVuejs,
-                FaPython
+                SiCplusplus
               ]}
             />
             <ProjectCard

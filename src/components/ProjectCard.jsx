@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 
 function ProjectCard(props) {
   return (
-    <div className="flex flex-col items-center justify-center w-10/12 h-full bg-mySecondary rounded-xl space-y-5">
+    <a className="flex flex-col items-center justify-center w-10/12 h-full bg-mySecondary rounded-xl space-y-5"
+      href={props.repository}
+      target='_blank'>
       <div className="flex items-center justify-center text-white text-4xl bg-mySecondary border-4 border-myAquamarine rounded-full w-32 h-32 overflow-hidden mt-5">
         {props.icon}
       </div>
@@ -34,11 +36,12 @@ function ProjectCard(props) {
           </span>
         </p>
       </div>
-    </div>
+    </a>
   );
 }
 
 ProjectCard.propTypes = {
+  repository: PropTypes.string,
   icon: PropTypes.element,
   title: PropTypes.string,
   description: PropTypes.string,
