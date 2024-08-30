@@ -1,110 +1,309 @@
-import CustomCard from "../components/CustomCard.jsx";
-import OutlineButton from '../components/OutlineButton.jsx';
-import { useTheme } from "../contexts/ThemeContext.jsx";
-import { PiCrownSimpleFill } from "react-icons/pi";
-import { FaStar } from "react-icons/fa";
-import { IoIosPaper } from "react-icons/io";
-import ProjectCard from "../components/ProjectCard.jsx";
+import { useState } from "react";
+import ProjectCard from "../components/ProjectCard";
+
+import { FaGithub } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+
+// Projects Technologies
+import { FaRust } from "react-icons/fa";
+import { FaVuejs } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
 
 function Projects() {
-    const { isLightMode } = useTheme();
+  const [selectedCategory, setSelectedCategory] = useState("Fullstack");
 
-    return (
-        <>
-            <div className="flex flex-grow flex-col items-center lg:items-left mt-36 mb-5">
-                    <div className={`${isLightMode ? 'text-black' : 'text-white'} flex flex-row text-2xl md:text-4xl font-bold justify-start items-center lg:w-screen lg:max-w-screen-lg xl:max-w-screen-xl`}>
-                        <span>Hall of Fame</span>
-                        <PiCrownSimpleFill className='text-3xl md:text-5xl ml-2' />
-                    </div>
 
-                    <div className={`flex flex-col justify-center items-center space-y-5 my-3 w-80 md:max-w-screen-lg md:w-screen lg:flex-row lg:space-x-5 lg:space-y-0  lg:max-w-screen-lg xl:max-w-screen-xl`}>
-                        <ProjectCard 
-                            imgSrc='./images/cards/portfolio.webp' 
-                            title='Web Portfolio'
-                            description='The creation of this website is one of my best projects. On this website, you can find information about me.'
-                            link="https://github.com/akhoz/PortfolioWeb"
-                            technologies='https://skillicons.dev/icons?i=html,css,js,react,tailwindcss,vite&perline=3'/>
-                        <ProjectCard 
-                            imgSrc='./images/cards/COMINGSOON.png' 
-                            title='Coming soon'
-                            description='I am working on new projects. Stay tuned for updates to this section.'
-                            link="https://github.com/akhoz/PortfolioWeb"
-                            technologies=''/>
-                        <ProjectCard 
-                            imgSrc='./images/cards/COMINGSOON.png' 
-                            title='Coming soon'
-                            description='I am working on new projects. Stay tuned for updates to this section.'
-                            link="https://github.com/akhoz/PortfolioWeb"
-                            technologies=''/>
-                    </div>
+  return (
+    <div className="flex flex-col w-full h-grow items-center justify-center mt-40">
+      <h1 className="text-white text-4xl">
+        My Projects
+      </h1>
+      <div className="flex flex-col w-full items-center justify-center text-myGray space-y-2 mt-20 mb-14 md:space-y-0 md:w-3/4 md:flex-row md:space-x-4 lg:justify-start ">
+        <button onClick={() => setSelectedCategory("Fullstack")} className="relative">
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform -translate-x-4 ${selectedCategory === "Fullstack" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &lt;
+          </span>
+          <span className="ml-4">Fullstack</span>
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform translate-x-4 ${selectedCategory === "Fullstack" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &nbsp;/&gt;
+          </span>
+        </button>
+        <button onClick={() => setSelectedCategory("Frontend")} className="relative">
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform -translate-x-4 ${selectedCategory === "Frontend" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &lt;
+          </span>
+          <span className="ml-4">Frontend</span>
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform translate-x-4 ${selectedCategory === "Frontend" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &nbsp;/&gt;
+          </span>
+        </button>
+        <button onClick={() => setSelectedCategory("Backend")} className="relative">
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform -translate-x-4 ${selectedCategory === "Backend" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &lt;
+          </span>
+          <span className="ml-4">Backend</span>
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform translate-x-4 ${selectedCategory === "Backend" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &nbsp;/&gt;
+          </span>
+        </button>
+        <button onClick={() => setSelectedCategory("AI - ML - DS")} className="relative">
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform -translate-x-4 ${selectedCategory === "AI - ML - DS" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &lt;
+          </span>
+          <span className="ml-4">AI - ML - DS</span>
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform translate-x-4 ${selectedCategory === "AI - ML - DS" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &nbsp;/&gt;
+          </span>
+        </button>
+        <button onClick={() => setSelectedCategory("Others")} className="relative">
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform -translate-x-4 ${selectedCategory === "Others" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &lt;
+          </span>
+          <span className="ml-4">Others</span>
+          <span
+            className={`text-myAquamarine absolute transition-all duration-500 ease-in-out transform translate-x-4 ${selectedCategory === "Others" ? "opacity-100 translate-x-0" : "opacity-0"
+              }`}
+          >
+            &nbsp;/&gt;
+          </span>
+        </button>
+      </div>
+      <div className="grid grid-cols-1 gap-2 w-3/4 items-center justify-center md:grid-cols-2 lg:grid-cols-3">
+        {selectedCategory === "Fullstack" && (
+          <>
+            <ProjectCard
+              icon={<FaGithub />}
+              title="Hello World"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "iZackk": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+            <ProjectCard
+              icon={<BsTwitterX />}
+              title="Second Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaVuejs,
+                FaPython
+              ]}
+            />
+            <ProjectCard
+              icon={<BsInstagram />}
+              title="Third Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+          </>
+        )}
 
-                    <div className={`${isLightMode ? 'text-black' : 'text-white'} flex flex-row text-2xl mt-5 md:text-4xl font-bold justify-start items-center lg:w-screen lg:max-w-screen-lg xl:max-w-screen-xl`}>
-                        <span>Personal Projects</span>
-                        <FaStar className='text-3xl md:text-5xl ml-2' />
-                    </div>
+        {selectedCategory === "Frontend" && (
+          <>
+            <ProjectCard
+              icon={<FaGithub />}
+              title="Hello World"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "iZackk": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+            <ProjectCard
+              icon={<BsTwitterX />}
+              title="Second Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaVuejs,
+                FaPython
+              ]}
+            />
+            <ProjectCard
+              icon={<BsInstagram />}
+              title="Third Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+          </>
+        )}
 
-                    <div className={`flex flex-col justify-center items-center space-y-5 my-3 w-80 md:max-w-screen-lg md:w-screen lg:flex-row lg:space-x-5 lg:space-y-0  lg:max-w-screen-lg xl:max-w-screen-xl`}>
-                        <ProjectCard 
-                            imgSrc='./images/cards/MarkerLandingPage.png' 
-                            title='Marker Landing Page'
-                            description='Pre-release page of "Marker". This project marks my first foray into using TypeScript within React environments.'
-                            link="https://akhoz.github.io/MarkerLandingPage/"
-                            technologies='https://skillicons.dev/icons?i=html,css,ts,react,tailwindcss,vite&perline=3'/>
-                        <ProjectCard 
-                            imgSrc='./images/cards/COMINGSOON.png' 
-                            title='Coming soon'
-                            description='I am working on new projects. Stay tuned for updates to this section.'
-                            link="https://github.com/akhoz/PortfolioWeb"
-                            technologies=''/>
-                        <ProjectCard 
-                            imgSrc='./images/cards/COMINGSOON.png' 
-                            title='Coming soon'
-                            description='I am working on new projects. Stay tuned for updates to this section.'
-                            link="https://github.com/akhoz/PortfolioWeb"
-                            technologies=''/>
-                    </div>
+        {selectedCategory === "Backend" && (
+          <>
+            <ProjectCard
+              icon={<FaGithub />}
+              title="Hello World"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "iZackk": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+            <ProjectCard
+              icon={<BsTwitterX />}
+              title="Second Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaVuejs,
+                FaPython
+              ]}
+            />
+            <ProjectCard
+              icon={<BsInstagram />}
+              title="Third Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+          </>
+        )}
 
-                    <div className={`${isLightMode ? 'text-black' : 'text-white'} flex flex-row text-2xl mt-5 md:text-4xl font-bold justify-start items-center lg:w-screen lg:max-w-screen-lg xl:max-w-screen-xl`}>
-                        <span>Academic Projects</span>
-                        <IoIosPaper className='text-3xl md:text-5xl ml-2' />
-                    </div>
+        {selectedCategory === "AI - ML - DS" && (
+          <>
+            <ProjectCard
+              icon={<FaGithub />}
+              title="Hello World"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "iZackk": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+            <ProjectCard
+              icon={<BsTwitterX />}
+              title="Second Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaVuejs,
+                FaPython
+              ]}
+            />
+            <ProjectCard
+              icon={<BsInstagram />}
+              title="Third Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+          </>
+        )}
 
-                    <div className={`flex flex-col justify-center items-center space-y-5 my-3 w-80 md:max-w-screen-lg md:w-screen lg:flex-row lg:space-x-5 lg:space-y-0  lg:max-w-screen-lg xl:max-w-screen-xl`}>
-                        <ProjectCard 
-                            imgSrc='./images/cards/webscrapping.webp' 
-                            title='Web Scraping: Game Crawler'
-                            description='A web scraper gathers game listings from various platforms, displaying the cheapest options on a public site with Metascore and Time to Achieve data."'
-                            link="https://github.com/akhoz/Web-Scraping-Game-Crawler"
-                            technologies='https://skillicons.dev/icons?i=python,vue,ts'/>
-                        <ProjectCard 
-                            imgSrc='./images/cards/COMINGSOON.png' 
-                            title='Coming soon'
-                            description='I am working on new projects. Stay tuned for updates to this section.'
-                            link="https://github.com/akhoz/PortfolioWeb"
-                            technologies=''/>
-                        <ProjectCard 
-                            imgSrc='./images/cards/COMINGSOON.png' 
-                            title='Coming soon'
-                            description='I am working on new projects. Stay tuned for updates to this section.'
-                            link="https://github.com/akhoz/Web-Scraping-Game-Crawler"
-                            technologies=''/>                                                
-                    </div>
-
-                    <div className='mt-5 my-3'>
-                        <OutlineButton text="Find all my projects on GitHub" link="https://github.com/akhoz" />
-                    </div>
-            </div>
-            <div className={`flex flex-row justify-start items-center lg:items-start mx-5 md:mx-32 mb-5 ${isLightMode ? "text-black" : "text-white"}`}>
-                    <p>
-                        Many of my projects have been collaborated on with these colleagues; 
-                        I recommend checking out their profiles: <a href="https://github.com/iZackk26" target="_blank" rel="noopener noreferrer" className={`border-b ${isLightMode ? "border-lightGradientInit" : "border-darkGradientInit"}`}>
-                        iZack,</a> <a href="https://github.com/hectorcaravacavargas" target="_blank" rel="noopener noreferrer" className={`border-b ${isLightMode ? "border-lightGradientInit" : "border-darkGradientInit"}`}>
-                        Hector</a> & <a href="https://github.com/RamchelOrtiz" target="_blank" rel="noopener noreferrer" className={`border-b ${isLightMode ? "border-lightGradientInit" : "border-darkGradientInit"}`}> 
-                        Ram. </a>
-                    </p>
-            </div>
-        </>
-    );
+        {selectedCategory === "Others" && (
+          <>
+            <ProjectCard
+              icon={<FaGithub />}
+              title="Hello World"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "iZackk": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+            <ProjectCard
+              icon={<BsTwitterX />}
+              title="Second Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaVuejs,
+                FaPython
+              ]}
+            />
+            <ProjectCard
+              icon={<BsInstagram />}
+              title="Third Project"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula ex et dolor sagittis, eu vestibulum lorem tincidunt. Nullam euismod, nisi vel interdum fringilla, nisl ipsum ultricies arcu, vitae malesuada velit ligula ac nisi."
+              collabolators={{
+                "Ram": "https://www.izackk.com",
+                "Hector": "https://www.izackk.com"
+              }}
+              technologies={[
+                FaRust
+              ]}
+            />
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default Projects;

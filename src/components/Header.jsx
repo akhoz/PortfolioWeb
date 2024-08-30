@@ -13,24 +13,18 @@ function Header() {
 
   return (
     <div className={`flex flex-row justify-between items-center mb-3 fixed top-0 left-0 right-0 z-10 py-8 px-10 md:px-28 transition-all duration-300 opacity-90 ${isLightMode ? 'bg-lightGray' : 'bg-darkBlue'}`}>
-      <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
+      <Link to='/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
         AkhozDev
       </Link>
       <div className='hidden md:flex flex-row space-x-2 md:space-x-5 items-center'>
-        <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
+        <Link to='/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
           Home
         </Link>
-        <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
+        <Link to='/Experience/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
           Experience
         </Link>
-        <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
+        <Link to='/Projects/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
           Projects
-        </Link>
-        <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
-          Skills
-        </Link>
-        <Link to='/PortfolioWeb/' onClick={handleButtonClick} className={`${isLightMode ? 'text-black' : 'text-white'}`}>
-          Contact
         </Link>
       </div>
       <div className='flex flex-col items-end justify-center text-white md:hidden'>

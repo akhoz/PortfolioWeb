@@ -1,4 +1,6 @@
 import Marquee from "react-fast-marquee";
+import { Link, useLocation } from 'react-router-dom';
+
 import { FaGithub } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
@@ -74,34 +76,33 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className='flex sm:flex-row bg-myAquamarine lg:flex-col space-x-3 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden px-2 py-2 mt-16 lg:mt-0'>
+        <div className='flex sm:flex-row bg-myAquamarine lg:flex-col space-x-3 lg:space-x-0 justify-center items-center rounded-xl overflow-hidden text-white px-2 py-2 mt-16 lg:mt-0'>
           <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
-            <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
+            <BsLinkedin className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110`} />
           </a>
           <a href="https://github.com/akhoz" target="_blank" rel="noopener noreferrer">
-            <FaGithub className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white mx-0`} />
+            <FaGithub className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 mx-0`} />
           </a>
           <a href="mailto:akhozdev@gmail.com" target="_blank" rel="noopener noreferrer">
-            <SiGmail className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
+            <SiGmail className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110`} />
           </a>
           <a href="https://twitter.com/akhoz69" target="_blank" rel="noopener noreferrer">
-            <BsTwitterX className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
+            <BsTwitterX className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110`} />
           </a>
           <a href="https://www.instagram.com/adrian_jvp25/" target="_blank" rel="noopener noreferrer">
-            <BsInstagram className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110 text-white`} />
+            <BsInstagram className={`text-3xl my-2 md:transition-transform md:transform md:hover:scale-110`} />
           </a>
         </div>
       </div>
       <div className='flex flex-col-reverse items-center justify-center w-10/12 mb-40 space-y-10 lg:justify-between lg:space-y-0 lg:px-14 lg:flex-row lg:items-start'>
-        <div className="flex flex-col items-start justify-center space-y-10 mt-20 lg:mt-0 lg:w-1/2">
+        <div className="flex flex-col items-start justify-center space-y-10 mt-44 lg:mt-0 lg:w-1/2">
           <div>
             <h2 className='text-white text-4xl'>
               About <span className='text-myAquamarine'>me</span>
             </h2>
             <p className='text-myGray'>
               My name is Adrian Villalobos, and I'm currently studying Software Engineering at ITCR, in my second year.
-              Among my skills are mathematics, including linear algebra, differential and integral calculus, and of course, various programming
-              skills that you can find in my skills section.
+              Among my skills are mathematics, including linear algebra, differential and integral calculus, and of course, various programming skills.
             </p>
           </div>
           <div>
@@ -126,7 +127,7 @@ function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between h-full space-y-5 lg:items-end lg:justify-center lg:w-1/2">
-          <h2 className='text-myGray text-4xl'>
+          <h2 className='text-myDarkGray text-4xl'>
             My Capabilities
           </h2>
           <div className="flex flex-col items-start justify-center space-y-5">
@@ -171,8 +172,13 @@ function Home() {
               </h3>
             </div>
           </div>
-          <p className="text-myDarkGray text-center lg:text-start lg:w-1/2">
-            Learn more about my capabilities and what can I offer in the skills section.
+          <p className="text-myGray text-center lg:text-end lg:w-1/2">
+            I've learned these skills throughout my university career and through self-study. You can find the applications
+            of these abilities in the <Link to='/Projects/'>
+              <span className={`border-b border-myAquamarine`}>
+                projects
+              </span>
+            </Link> section.
           </p>
         </div>
       </div>

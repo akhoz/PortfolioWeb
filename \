@@ -1,0 +1,27 @@
+import PropTypes from 'prop-types';
+
+function ProjectCard(props) {
+  return (
+    <div className="flex flex-col items-center justify-center w-10/12 h-full bg-mySecondary rounded-xl">
+      <div className="flex items-center justify-center text-white text-4xl bg-mySecondary border-4 border-myAquamarine rounded-full w-32 h-32 overflow-hidden mt-5">
+        {props.icon}
+      </div>
+      <div className="flex flex-col items-center justify-center w-10/12">
+        <h1 className="text-xl text-white">
+          {props.title}
+        </h1>
+        <p className="text-myGray text-center">
+          {props.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+ProjectCard.propTypes = {
+  icon: PropTypes.element,
+  title: PropTypes.string,
+
+}
+
+export default ProjectCard;

@@ -5,9 +5,8 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 
 import Home from "./pages/Home.jsx"
-import AboutMe from "./pages/AboutMe.jsx"
+import Experience from './pages/Experience.jsx';
 import Projects from "./pages/Projects.jsx"
-import Skills from "./pages/Skills.jsx"
 
 function App() {
   const root = "/";
@@ -19,10 +18,8 @@ function App() {
           <Header className='opacity-90' />
           <Routes>
             <Route path={`${root}`} element={<Home />} />
-            <Route path={`${root}/AboutMe`} element={<AboutMe />} />
+            <Route path={`${root}/Experience`} element={<Experience />} />
             <Route path={`${root}/Projects`} element={<Projects />} />
-            <Route path={`${root}/Skills`} element={<Skills />} />
-
           </Routes>
           <Footer />
         </div>

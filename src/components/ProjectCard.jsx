@@ -1,37 +1,49 @@
-import { useTheme } from "../contexts/ThemeContext.jsx";
 import PropTypes from 'prop-types';
 
 function ProjectCard(props) {
-    const { isLightMode } = useTheme();
-
-    return (
-        <a href={props.link} target="_blank" rel="noopener noreferrer">
-        <div className="group h-96 w-80 [perspective:1000px]">
-            <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0">
-                    <img className="h-full w-full rounded-xl object-cover overflow-hidden" src={props.imgSrc} alt="" />
-                </div>
-                    <div className={`absolute inset-0 h-full w-full rounded-xl overflow-hidden ${isLightMode ? "bg-gradient-to-bl from-lightGradientInit to-lightGradientEnd" : "bg-gradient-to-bl from-darkGradientInit to-darkGradientEnd"} px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]`}>
-                        <div className="flex min-h-full flex-col items-center justify-start py-5">
-                            <h1 className="text-3xl font-bold">{props.title}</h1>
-                            <hr className={`border-t-2 w-full px-2 my-2 bg-white`}/>
-                            <p className="text-base">{props.description}</p>
-                            <hr className={`border-t-2 w-full px-2 mt-2 mb-3 bg-white`}/>
-                            <img className='w-3/4' src={props.technologies} />
-                        </div>
-                </div>
-            </div>
-        </div>  
-        </a>
-    );
+  return (
+    <div className="flex flex-col items-center justify-center w-10/12 h-full bg-mySecondary rounded-xl space-y-5">
+      <div className="flex items-center justify-center text-white text-4xl bg-mySecondary border-4 border-myAquamarine rounded-full w-32 h-32 overflow-hidden mt-5">
+        {props.icon}
+      </div>
+      <div className="flex flex-col items-center justify-center w-10/12">
+        <h1 className="text-xl text-white">
+          {props.title}
+        </h1>
+        <p className="text-myGray text-justify">
+          {props.description}
+        </p>
+      </div>
+      <div className="flex flex-col items-start justify-center w-10/12 pb-5">
+        <p className='text-white'>
+          Collabolators:&nbsp;
+          {Object.entries(props.collabolators).map(([name, link]) => (
+            <a key={name} href={link} target="_blank" className="text-myAquamarine hover:underline mr-2">
+              {name}
+            </a>
+          ))}
+        </p>
+        <p className='flex text-white'>
+          Technologies:&nbsp;
+          <span className="flex items-center space-x-2">
+            {props.technologies.map((Icon, index) => (
+              <div key={index} className="text-myAquamarine">
+                <Icon />
+              </div>
+            ))}
+          </span>
+        </p>
+      </div>
+    </div>
+  );
 }
 
 ProjectCard.propTypes = {
-    imgSrc: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    technologies: PropTypes.string.isRequired
-};
+  icon: PropTypes.element,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  collabolators: PropTypes.objectOf(PropTypes.string),
+  technologies: PropTypes.arrayOf(PropTypes.element)
+}
 
 export default ProjectCard;
