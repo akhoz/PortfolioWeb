@@ -117,7 +117,7 @@ function Home() {
           </div>
           <div>
             <h2 className='text-white text-4xl'>
-              Can I <span className='text-myAquamarine'>use</span> your projects?
+              Can I <span className='text-myAquamarine'>leverage</span> your projects?
             </h2>
             <p className='text-myGray'>
               It depends; each project has its own license and specifications. I recommend that you read
